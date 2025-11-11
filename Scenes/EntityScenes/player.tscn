@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuolgrnv855bt"]
+
+[ext_resource type="Script" uid="uid://difm1s7vnjrod" path="res://Scripts/EntityScripts/Player.cs" id="1_mwryb"]
+[ext_resource type="PackedScene" uid="uid://d4g4i0bgu2guu" path="res://Scenes/MiscScenes/ui.tscn" id="1_yaiop"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4w45d"]
+radius = 0.2993164
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_mwryb")
+
+[node name="UI" parent="." instance=ExtResource("1_yaiop")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_4w45d")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6307757, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
