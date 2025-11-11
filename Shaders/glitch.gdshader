@@ -6,7 +6,7 @@ uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_n
 uniform float wiggleMult : hint_range(0.0, 100.00, 0.0001) = 0.005;
 uniform float wiggleTime : hint_range(0.0, 50.0, 0.1) = 3.0;
 uniform float wiggleY : hint_range(0.0, 100.0, 0.1) = 5.0;
-uniform float BlendAmount : hint_range(-10.0, 10.0, 0.05) = 0.5;
+uniform float BlendAmount : hint_range(-1000.0, 1000.0, 0.05) = 0.5;
 
 // ==== Resolution / color depth / dithering ====
 uniform bool change_color_depth = false;
